@@ -2,6 +2,7 @@
 *{
     box-sizing: border-box;
     font-size: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* header */
@@ -23,7 +24,6 @@ header .menu a{
     font-size: 18px;
     color:#646464;
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
     padding: 0 10px;
 }
 
@@ -41,20 +41,26 @@ section{
 .search-box .text h1{
     font-size: 48px;
     padding-bottom:15px ;
+    line-height: 52px;
+}
+.search-box strong{
+    border-bottom: 2px solid #E0DA48;
 }
 .search-box .guide a{
     color:#646464;
     text-decoration: none;
 }
-.search-box .text,.search-area{
+.search-box .text{
     display: flex;
     flex:none;
-    width: 50%;
+    width: 60%;
     flex-direction: column;
     justify-content: center;
 }
 .search-box .search-area{
     align-items: flex-end;
+    flex:none;
+    width: 40%;
 }
 .search-area .select{
     width: 300px;
@@ -73,3 +79,85 @@ section{
 }
 
 /* 輪播圖 */
+.banner-pic{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.banner-pic img{
+    border-radius: 24px;
+}
+
+/* newEvent */
+.new-event,
+.hot-spot,
+.good-food{
+    margin: 36px 0;
+}
+.container{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title h2{
+    font-size: 36px;
+    padding: 6px 0;
+}
+.title a{
+    color:#FF725E;
+    text-decoration: none;
+}
+.card{
+    width: 570px;
+    margin: 6px 15px;
+    background-color: #E5E5E5;
+    border-radius: 12px;
+    display: flex;
+}
+.text{
+    padding:16px 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+.event-name{
+    font-size: 22px;
+    font-weight: bold;
+}
+.more-info{
+    display: flex;
+    justify-content: space-between;
+}
+.more-info a{
+    text-decoration: none;
+    color: #7F977B;
+}
+
+/* hot-spot */
+.box{
+    display: flex;  
+}
+.item{
+    width: 270px;
+    margin: 12px 15px;
+
+}
+.img-box{
+    width: 255px;
+    height: 200px;
+}
+.img-box img{
+    width:100% ;
+    border-radius: 20px;
+}
+.text-box .name{
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px 0 6px;
+}
