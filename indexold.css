@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+*{
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* header */
+header{
+    width: 1200px;
+    margin: auto;
+    height:80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #E5E5E5;
+    padding: 0 20px;
+    margin-bottom: 80px;
+}
+header .logo{
+    width: 300px;
+}
+header .menu a{
+    font-size: 18px;
+    color:#646464;
+    text-decoration: none;
+    padding: 0 10px;
+}
+#menu-control{
+    position: absolute;
+    z-index:-2;
+  }
+/* 文字+搜尋欄 */
+section{
+    width: 1200px;
+    margin: auto;
+}
+.search-box{
+    width: 1000px;
+    display: flex;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.search-box .text h1{
+    font-size: 48px;
+    padding-bottom:15px ;
+    line-height: 52px;
+}
+.search-box strong{
+    border-bottom: 2px solid #E0DA48;
+}
+.search-box .guide a{
+    color:#646464;
+    text-decoration: none;
+}
+.search-box .text{
+    display: flex;
+    flex:none;
+    width: 60%;
+    flex-direction: column;
+    justify-content: center;
+}
+.search-box .search-area{
+    align-items: flex-end;
+    flex:none;
+    width: 40%;
+}
+.search-area .select{
+    width: 300px;
+    height: 50px;
+    border: 1px solid #E6E6E6;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+.search-area .textSearch{
+    background-color: #F9F9F9;
+}
+.search-area .buttonSearch{
+    background-color: #7F977B;
+    color:#FFFFFF;
+    text-align: center;
+}
+
+/* 輪播圖 */
+.banner-pic{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.banner-pic img{
+    border-radius: 24px;
+}
+
+/* newEvent */
+.new-event,
+.hot-spot,
+.good-food{
+    margin: 36px 0;
+}
+.container{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title h2{
+    font-size: 36px;
+    padding: 6px 0;
+}
+.title a{
+    color:#FF725E;
+    text-decoration: none;
+}
+.card{
+    width: 570px;
+    margin: 6px 15px;
+    background-color: #E5E5E5;
+    border-radius: 12px;
+    display: flex;
+}
+.text{
+    padding:16px 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+.event-name{
+    font-size: 22px;
+    font-weight: bold;
+}
+.more-info{
+    display: flex;
+    justify-content: space-between;
+}
+.more-info a{
+    text-decoration: none;
+    color: #7F977B;
+}
+
+/* hot-spot */
+.box{
+    display: flex;  
+}
+.item{
+    width: 270px;
+    margin: 12px 15px;
+
+}
+.img-box{
+    width: 255px;
+    height: 200px;
+}
+.img-box img{
+    width:100% ;
+    border-radius: 20px;
+}
+.text-box .name{
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px 0 6px;
+}
+
+@media screen and (max-width:768px){
+    header .menu{
+        display: none;
+    }
+}

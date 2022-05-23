@@ -7,41 +7,66 @@
 
 /* header */
 header{
-    width: 1200px;
     margin: auto;
-    height:80px;
+    height:64px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    border-bottom: 1px solid #E5E5E5;
-    padding: 0 20px;
-    margin-bottom: 80px;
+    position: relative;
 }
 header .logo{
     width: 300px;
 }
-header .menu a{
-    font-size: 18px;
-    color:#646464;
-    text-decoration: none;
-    padding: 0 10px;
+.menu-btn{
+    width: 50px;
+    height: 50px;
+    background-color: #A8B8A5;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.menu-btn span{
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    display: block;
+    overflow:hidden; /*確定選單不會跑出來*/
+}
+
+.menu-btn::before{
+    content:"";
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    background-color: #fff;
+    /* 以下三項為垂直置中的設定   */
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /*可以有多個陰影*/
+    box-shadow: 0 10px 0 #fff/*下方做一條*/,0 -10px 0 #fff; /*用y軸的負值做上方的一條*/
+}
+
+header .menu{
+    display: none;
 }
 
 /* 文字+搜尋欄 */
 section{
-    width: 1200px;
     margin: auto;
 }
 .search-box{
-    width: 1000px;
-    display: flex;
     margin: auto;
-    margin-bottom: 50px;
+    text-align: center;
 }
-.search-box .text h1{
-    font-size: 48px;
-    padding-bottom:15px ;
-    line-height: 52px;
+.search-box h1{
+    font-size: 28px;
+    padding:6px 0 14px;
 }
 .search-box strong{
     border-bottom: 2px solid #E0DA48;
@@ -50,24 +75,20 @@ section{
     color:#646464;
     text-decoration: none;
 }
-.search-box .text{
-    display: flex;
-    flex:none;
-    width: 60%;
-    flex-direction: column;
-    justify-content: center;
-}
 .search-box .search-area{
-    align-items: flex-end;
-    flex:none;
-    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .search-area .select{
-    width: 300px;
+    width: 345px;
     height: 50px;
     border: 1px solid #E6E6E6;
     border-radius: 5px;
     margin: 5px 0;
+}
+.search-box .text{
+    margin-bottom: 35px;
 }
 .search-area .textSearch{
     background-color: #F9F9F9;
@@ -82,8 +103,12 @@ section{
 .banner-pic{
     text-align: center;
     margin-bottom: 30px;
+    width: 345px;
+    height: 185px;
 }
 .banner-pic img{
+    width: 100%;
+    min-height: 185px;
     border-radius: 24px;
 }
 
@@ -91,12 +116,14 @@ section{
 .new-event,
 .hot-spot,
 .good-food{
-    margin: 36px 0;
+    margin: 24px 0;
 }
 .container{
     display: flex;
     margin: auto;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
 }
 .title{
     display: flex;
@@ -112,52 +139,18 @@ section{
     text-decoration: none;
 }
 .card{
-    width: 570px;
-    margin: 6px 15px;
-    background-color: #E5E5E5;
-    border-radius: 12px;
     display: flex;
-}
-.text{
-    padding:16px 30px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
+    margin: 8px 15px;
+    background-color: #A8B8A5;
 }
-.event-name{
-    font-size: 22px;
-    font-weight: bold;
+.card .pic{
+    width: 90px;
+    height: 62px;
 }
-.more-info{
-    display: flex;
-    justify-content: space-between;
-}
-.more-info a{
-    text-decoration: none;
-    color: #7F977B;
-}
-
-/* hot-spot */
-.box{
-    display: flex;  
-}
-.item{
-    width: 270px;
-    margin: 12px 15px;
-
-}
-.img-box{
-    width: 255px;
-    height: 200px;
-}
-.img-box img{
-    width:100% ;
-    border-radius: 20px;
-}
-.text-box .name{
-    font-size: 22px;
-    font-weight: bold;
-    padding: 10px 0 6px;
+.card .pic img{
+    border-radius: 12px;
+    width: 100%;
+    max-height: 62px;
+    overflow: hidden;
 }
